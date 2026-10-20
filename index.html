@@ -1,131 +1,437 @@
-# Política de privacidad de Última Palabra
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aviso de Privacidad — Última Palabra</title>
+<style>
+  :root {
+    --bg: #faf7f0;
+    --surface: #ffffff;
+    --text: #2b2420;
+    --text-muted: #6b5f52;
+    --accent: #9a4b32;
+    --accent-soft: #f3e3da;
+    --border: #e6ddd0;
+    --max-width: 760px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #1b1713;
+      --surface: #241f1a;
+      --text: #efe8de;
+      --text-muted: #b2a797;
+      --accent: #e08a67;
+      --accent-soft: #3a2a21;
+      --border: #3a332b;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #1b1713;
+    --surface: #241f1a;
+    --text: #efe8de;
+    --text-muted: #b2a797;
+    --accent: #e08a67;
+    --accent-soft: #3a2a21;
+    --border: #3a332b;
+  }
 
-**Fecha de entrada en vigor:** 19 de octubre de 2026  
-**Aplicación:** Última Palabra  
-**Responsable del tratamiento:** [Nombre completo o razón social del desarrollador]  
-**Contacto de privacidad:** [Correo electrónico de contacto]
+  * { box-sizing: border-box; }
 
-## 1. Introducción
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Segoe UI", system-ui, -apple-system, Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
 
-Última Palabra es un juego para dispositivos Android que permite jugar partidas contra la inteligencia artificial y contra otros jugadores. Esta política explica qué información se trata al utilizar la aplicación, para qué se utiliza, con quién puede compartirse y cómo puedes solicitar su acceso, corrección o eliminación.
+  .wrap {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 48px 20px 80px;
+  }
 
-Al utilizar la aplicación, puedes consultar esta política para conocer las prácticas de privacidad aplicables. Cuando la legislación requiera consentimiento, este se solicitará de la forma correspondiente.
+  header.doc-header {
+    margin-bottom: 36px;
+  }
 
-## 2. Información que podemos tratar
+  .eyebrow {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: var(--accent-soft);
+    padding: 4px 10px;
+    border-radius: 999px;
+    margin-bottom: 14px;
+  }
 
-Según las funciones que utilices, la aplicación puede tratar las siguientes categorías de información:
+  h1 {
+    font-size: 1.9rem;
+    line-height: 1.25;
+    margin: 0 0 8px;
+    text-wrap: balance;
+  }
 
-**Información de cuenta**
-- Identificador único de usuario generado por Firebase Authentication.
-- Información necesaria para mantener y recuperar una cuenta.
-- Si vinculas una cuenta de Google, los datos de perfil que el proceso de autenticación efectivamente obtiene, como el nombre o la dirección de correo electrónico, cuando estén disponibles.
+  .meta {
+    color: var(--text-muted);
+    font-size: 0.92rem;
+    margin: 0;
+  }
 
-**Información del perfil y del juego**
-- Nombre visible y avatar seleccionado.
-- Puntuación, victorias, derrotas y posición en el ranking.
-- Historial y resultados de partidas.
-- Identificadores de partidas, salas y datos necesarios para gestionar partidas multijugador.
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 28px 28px 8px;
+  }
 
-**Información técnica**
-- Datos técnicos que los servicios integrados puedan procesar para prestar sus funciones, proteger la infraestructura o diagnosticar problemas, de acuerdo con sus configuraciones y sus propias políticas.
+  nav.toc {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 28px;
+  }
+  nav.toc h2 {
+    font-size: 0.78rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin: 0 0 10px;
+  }
+  nav.toc ol {
+    margin: 0;
+    padding-left: 1.2em;
+    columns: 1;
+    font-size: 0.92rem;
+  }
+  nav.toc li { margin-bottom: 4px; }
+  nav.toc a { color: var(--text); text-decoration: none; }
+  nav.toc a:hover { color: var(--accent); text-decoration: underline; }
 
-No afirmamos que todas estas categorías se recopilen en todos los casos. El tratamiento concreto depende de las funciones que utilices y de los servicios que estén habilitados en la versión instalada.
+  section {
+    padding: 26px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  section:last-of-type { border-bottom: none; }
 
-## 3. Para qué utilizamos la información
+  h2 {
+    font-size: 1.18rem;
+    margin: 0 0 12px;
+    text-wrap: balance;
+  }
+  h2 .num {
+    color: var(--accent);
+    font-variant-numeric: tabular-nums;
+    margin-right: 8px;
+  }
 
-La información se utiliza para:
+  h3 {
+    font-size: 1rem;
+    margin: 18px 0 8px;
+  }
 
-- Crear y mantener la cuenta del jugador.
-- Permitir la vinculación y recuperación de cuentas cuando estén disponibles.
-- Guardar el perfil, las puntuaciones y el historial de partidas.
-- Crear salas y permitir el funcionamiento de las partidas multijugador.
-- Mostrar el ranking y los resultados que correspondan a otros jugadores.
-- Mantener la integridad de las partidas y prevenir alteraciones indebidas de resultados.
-- Mantener la seguridad, estabilidad y funcionamiento de la aplicación.
-- Atender solicitudes relacionadas con privacidad y soporte.
+  p { margin: 0 0 12px; max-width: 65ch; }
+  ul, ol.plain { margin: 0 0 12px; padding-left: 1.3em; }
+  li { margin-bottom: 6px; max-width: 62ch; }
 
-La información no debe utilizarse para finalidades incompatibles con las aquí descritas sin proporcionar la información y obtener el consentimiento que corresponda.
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0 18px;
+    font-size: 0.92rem;
+  }
+  th, td {
+    text-align: left;
+    padding: 9px 10px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  th {
+    color: var(--text-muted);
+    font-weight: 600;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
 
-## 4. Servicios de terceros
+  .pill {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 999px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    white-space: nowrap;
+  }
 
-La aplicación utiliza servicios de Firebase y puede utilizar servicios de Google para funciones de autenticación y almacenamiento de información del juego.
+  .placeholder {
+    background: var(--accent-soft);
+    color: var(--accent);
+    padding: 1px 6px;
+    border-radius: 5px;
+    font-weight: 600;
+  }
 
-Estos proveedores pueden tratar datos conforme a sus propias condiciones y políticas de privacidad. Puedes consultar:
+  .note {
+    background: var(--accent-soft);
+    border-radius: 10px;
+    padding: 14px 16px;
+    font-size: 0.9rem;
+    color: var(--text);
+  }
+  .note strong { color: var(--accent); }
 
-- Firebase: https://firebase.google.com/support/privacy
-- Privacidad de Google: https://policies.google.com/privacy
+  footer {
+    margin-top: 32px;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    text-align: center;
+  }
 
-La información necesaria para el funcionamiento del juego puede procesarse mediante la infraestructura de dichos proveedores. El uso de estos servicios no significa que el desarrollador tenga acceso a todos los datos que ellos procesan.
+  a { color: var(--accent); }
 
-Esta política deberá actualizarse si se incorporan otros proveedores, herramientas de análisis, publicidad u otros servicios que traten datos personales.
+  @media print {
+    body { background: #fff; }
+    nav.toc, .card { border: none; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
 
-## 5. Información visible para otros jugadores
+  <header class="doc-header">
+    <span class="eyebrow">Aviso de Privacidad</span>
+    <h1>Última Palabra</h1>
+    <p class="meta">Última actualización: <strong>19 de octubre de 2026</strong> · Versión de la app: 1.04</p>
+  </header>
 
-En las funciones multijugador, determinados datos del juego pueden ser visibles para otros participantes, por ejemplo, el nombre visible, el avatar, la puntuación y los resultados que se necesiten para mostrar una partida o el ranking.
+  <nav class="toc" aria-label="Índice">
+    <h2>Contenido</h2>
+    <ol>
+      <li><a href="#responsable">Quién trata tus datos</a></li>
+      <li><a href="#que-datos">Qué datos recopilamos</a></li>
+      <li><a href="#que-no">Qué NO recopilamos</a></li>
+      <li><a href="#para-que">Para qué usamos tus datos</a></li>
+      <li><a href="#visibilidad">Qué ven otros jugadores</a></li>
+      <li><a href="#terceros">Con quién se comparte (Firebase / Google)</a></li>
+      <li><a href="#google-sign-in">Vincular tu cuenta de Google</a></li>
+      <li><a href="#conservacion">Cuánto tiempo se conserva</a></li>
+      <li><a href="#derechos">Tus derechos: acceso, cambio y eliminación</a></li>
+      <li><a href="#seguridad">Seguridad de los datos</a></li>
+      <li><a href="#menores">Menores de edad</a></li>
+      <li><a href="#cambios">Cambios a este aviso</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ol>
+  </nav>
 
-No compartas información personal en campos de nombre visible ni en otros espacios públicos del juego.
+  <div class="card">
 
-## 6. Publicidad y compras
+    <section id="responsable">
+      <h2><span class="num">1.</span>Quién trata tus datos</h2>
+      <p>
+        Última Palabra es un juego de cartas de palabras para Android, desarrollado por
+        <span class="placeholder">[nombre del desarrollador o estudio]</span>
+        (en adelante, "nosotros" o "el desarrollador"). Este aviso explica qué información
+        se recopila al usar la app, con qué fin y cómo puedes controlarla.
+      </p>
+      <p>
+        Puedes contactarnos en cualquier momento en
+        <span class="placeholder">[correo de contacto]</span>
+        para cualquier duda sobre este aviso o sobre tus datos.
+      </p>
+    </section>
 
-La inclusión de publicidad o compras dentro de la aplicación dependerá de las funciones que estén efectivamente habilitadas en cada versión.
+    <section id="que-datos">
+      <h2><span class="num">2.</span>Qué datos recopilamos</h2>
+      <p>
+        Última Palabra funciona principalmente de forma local (contra la IA del juego) o en
+        línea contra otro jugador (modo multijugador). Solo recopilamos los datos
+        estrictamente necesarios para que el multijugador, el ranking y el historial de
+        partidas funcionen.
+      </p>
 
-Si se incorpora publicidad, esta política se actualizará para identificar los proveedores, las categorías de datos que traten y las finalidades correspondientes antes de activar esas funciones, cuando proceda.
+      <h3>Identificador de sesión anónimo</h3>
+      <p>
+        Al abrir la app por primera vez, se crea automáticamente una sesión anónima mediante
+        Firebase Authentication (Autenticación anónima de Google). Esto genera un identificador
+        único (UID) asociado a tu dispositivo, sin pedirte ningún dato personal, correo ni
+        contraseña. Este identificador es lo que permite reconocer tu perfil y tus partidas
+        entre sesiones de la misma app.
+      </p>
 
-## 7. Conservación de los datos
+      <h3>Perfil de jugador</h3>
+      <p>Cuando creas tu perfil, se guardan los siguientes datos, elegidos por ti:</p>
+      <table>
+        <thead>
+          <tr><th>Dato</th><th>Descripción</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Nombre de usuario</td><td>Identificador único que eliges para iniciar partidas en línea.</td></tr>
+          <tr><td>Nombre a mostrar</td><td>El nombre visible para otros jugadores durante una partida; puedes cambiarlo cuando quieras.</td></tr>
+          <tr><td>Avatar</td><td>Un índice que señala una imagen de un set predefinido dentro de la app — nunca subes una foto propia.</td></tr>
+          <tr><td>Puntos, victorias y derrotas</td><td>Tu progreso competitivo, usado para el ranking público.</td></tr>
+          <tr><td>Fecha de creación del perfil</td><td>Marca de tiempo del servidor, generada automáticamente.</td></tr>
+        </tbody>
+      </table>
 
-Conservamos la información durante el tiempo necesario para proporcionar las funciones del juego, mantener la seguridad, administrar el ranking y cumplir las obligaciones legales aplicables.
+      <h3>Historial y partidas</h3>
+      <p>
+        Guardamos un historial de tus partidas en línea (resultado, nombre de usuario del
+        rival, puntos obtenidos y fecha) para que puedas consultarlo desde tu propio perfil.
+        Mientras una partida multijugador está en curso, también se guarda temporalmente el
+        estado de esa partida (cartas jugadas, turno, sala) en los servidores — ese dato deja
+        de ser necesario y se descarta una vez que la partida termina.
+      </p>
+    </section>
 
-Los plazos pueden variar según la categoría de información y la finalidad. La información que ya no sea necesaria deberá eliminarse o dejar de estar asociada a una persona identificable, salvo que exista una razón legítima para conservarla.
+    <section id="que-no">
+      <h2><span class="num">3.</span>Qué NO recopilamos</h2>
+      <ul>
+        <li>No pedimos correo electrónico ni contraseña para jugar.</li>
+        <li>No incluimos publicidad ni redes publicitarias de terceros.</li>
+        <li>No usamos herramientas de analítica o rastreo de terceros.</li>
+        <li>No accedemos a tu cámara, galería, contactos ni ubicación.</li>
+        <li>El único permiso que solicita la app es acceso a Internet, necesario para el modo multijugador y el ranking.</li>
+      </ul>
+    </section>
 
-## 8. Eliminación de la cuenta y de los datos
+    <section id="para-que">
+      <h2><span class="num">4.</span>Para qué usamos tus datos</h2>
+      <ul>
+        <li>Permitir que juegues partidas en línea contra otra persona en tiempo real.</li>
+        <li>Mostrar un ranking público de jugadores según sus puntos.</li>
+        <li>Mostrarte tu propio historial de partidas.</li>
+        <li>Reconocer tu perfil cada vez que abres la app, sin tener que volver a crearlo.</li>
+        <li>Permitirte recuperar tu progreso si cambias de dispositivo o reinstalas la app, en caso de que decidas vincular tu cuenta de Google (ver sección 7).</li>
+      </ul>
+      <p>No usamos tus datos con fines publicitarios ni los vendemos a terceros bajo ninguna circunstancia.</p>
+    </section>
 
-Puedes solicitar la eliminación de tu cuenta mediante el mecanismo de eliminación disponible en la aplicación o utilizando el siguiente medio:
+    <section id="visibilidad">
+      <h2><span class="num">5.</span>Qué ven otros jugadores</h2>
+      <p>
+        Para que el ranking y las salas de juego funcionen, parte de tu perfil es
+        <strong>pública</strong> dentro del juego: cualquier otro jugador puede ver tu nombre de
+        usuario, nombre a mostrar, avatar, puntos, victorias y derrotas. Tu historial de
+        partidas detallado, en cambio, es privado — solo tú puedes consultarlo.
+      </p>
+      <div class="note">
+        <strong>En corto:</strong> lo que verías de cualquier rival en la tabla de clasificación
+        es exactamente lo mismo que otros ven de ti. Nada más.
+      </div>
+    </section>
 
-**Solicitud de eliminación:** [URL pública del procedimiento de eliminación, si existe]  
-**Contacto:** [Correo electrónico de privacidad]
+    <section id="terceros">
+      <h2><span class="num">6.</span>Con quién se comparte (Firebase / Google)</h2>
+      <p>
+        Toda la información descrita arriba se almacena en <strong>Firebase</strong>
+        (Authentication y Realtime Database), un servicio de infraestructura operado por
+        Google LLC. Google actúa como encargado del tratamiento: almacena los datos en sus
+        servidores por nuestra cuenta, bajo las reglas de acceso que definimos (ver sección 9),
+        y no los usa para sus propios fines publicitarios.
+      </p>
+      <p>
+        Puedes consultar la política de privacidad de Firebase en
+        <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">firebase.google.com/support/privacy</a>.
+      </p>
+    </section>
 
-Al procesar una solicitud válida, eliminaremos la cuenta y los datos asociados que corresponda eliminar, conforme a las obligaciones legales y a las limitaciones técnicas aplicables.
+    <section id="google-sign-in">
+      <h2><span class="num">7.</span>Vincular tu cuenta de Google (opcional)</h2>
+      <p>
+        Por defecto tu perfil queda asociado únicamente a tu dispositivo (sesión anónima). Si
+        quieres poder recuperar tu progreso en otro dispositivo o tras reinstalar la app,
+        puedes vincular tu cuenta de Google de forma <strong>opcional</strong> desde los ajustes
+        del perfil.
+      </p>
+      <ul>
+        <li>Al vincular, se usa el selector de cuentas de Google (Credential Manager) para obtener una credencial que asocia tu perfil existente a esa cuenta — tu nombre de usuario, puntos e historial no cambian.</li>
+        <li>No almacenamos tu correo electrónico de Google en tu perfil del juego. Si ya existe otro perfil vinculado a esa misma cuenta de Google, tu correo puede mostrarse brevemente en la app para ayudarte a identificar cuál cuenta es, pero no se guarda en nuestra base de datos.</li>
+        <li>Puedes desvincular esta asociación o eliminar tu cuenta en cualquier momento (ver sección 9).</li>
+      </ul>
+    </section>
 
-Algunos registros podrán conservarse durante el tiempo estrictamente necesario cuando exista una obligación legal, una necesidad legítima de seguridad o una controversia pendiente. Si se aplica alguna excepción, la conservación y su finalidad deberán limitarse a lo necesario.
+    <section id="conservacion">
+      <h2><span class="num">8.</span>Cuánto tiempo se conserva</h2>
+      <p>
+        Conservamos tu perfil, estadísticas e historial mientras tu cuenta exista. Los datos
+        de una partida en curso (estado de la mesa, sala) son temporales y dejan de ser
+        necesarios una vez que la partida se resuelve. Si eliminas tu cuenta, todo lo anterior
+        se borra de forma permanente (ver siguiente sección).
+      </p>
+    </section>
 
-La eliminación de una cuenta no debe describirse como completa hasta verificar qué sucede con los datos del perfil, el ranking, el historial, las partidas y las copias o registros que mantengan los proveedores.
+    <section id="derechos">
+      <h2><span class="num">9.</span>Tus derechos: acceso, cambio y eliminación</h2>
+      <p>Desde la propia app puedes, en cualquier momento y sin necesidad de contactarnos:</p>
+      <ul>
+        <li><span class="pill">Ver</span> tu perfil, estadísticas e historial de partidas.</li>
+        <li><span class="pill">Cambiar</span> tu nombre a mostrar y tu avatar desde la pantalla de perfil.</li>
+        <li>
+          <span class="pill">Eliminar</span> tu cuenta por completo desde los ajustes del juego.
+          Esto borra de forma permanente tu perfil, tus estadísticas, tu historial de partidas,
+          tu nombre de usuario reservado y tu cuenta de autenticación — la acción no se puede
+          deshacer.
+        </li>
+      </ul>
+      <p>
+        Si prefieres solicitarlo directamente, puedes escribirnos a
+        <span class="placeholder">[correo de contacto]</span> y gestionaremos la eliminación
+        por ti.
+      </p>
+    </section>
 
-## 9. Seguridad de la información
+    <section id="seguridad">
+      <h2><span class="num">10.</span>Seguridad de los datos</h2>
+      <p>
+        El acceso a los datos en Firebase está protegido mediante reglas de seguridad del
+        lado del servidor: solo tú puedes leer tu historial de partidas detallado, solo los
+        participantes de una partida pueden ver su estado mientras dura, y los puntos del
+        ranking únicamente se actualizan cuando el propio servidor valida el resultado de
+        una partida — nunca directamente desde el dispositivo de un jugador.
+      </p>
+    </section>
 
-Aplicamos medidas técnicas y organizativas razonables para proteger la información contra el acceso, la modificación, la pérdida o la divulgación no autorizados.
+    <section id="menores">
+      <h2><span class="num">11.</span>Menores de edad</h2>
+      <p>
+        Última Palabra no está dirigida específicamente a niños y no solicita conscientemente
+        datos personales identificables de menores de edad. Si eres madre, padre o tutor y
+        crees que un menor a tu cargo nos ha proporcionado datos sin tu consentimiento,
+        contáctanos para eliminarlos.
+      </p>
+    </section>
 
-Ningún sistema puede garantizar seguridad absoluta. Si ocurre una vulneración que deba notificarse conforme a la legislación aplicable, se procederá según los requisitos correspondientes.
+    <section id="cambios">
+      <h2><span class="num">12.</span>Cambios a este aviso</h2>
+      <p>
+        Si este aviso cambia de forma relevante, actualizaremos la fecha que aparece al
+        principio de esta página. Te recomendamos revisarlo de vez en cuando, especialmente
+        antes de actualizar la app.
+      </p>
+    </section>
 
-## 10. Derechos de privacidad
+    <section id="contacto">
+      <h2><span class="num">13.</span>Contacto</h2>
+      <p>
+        ¿Dudas, solicitudes sobre tus datos o algo que no quedó claro? Escríbenos a
+        <span class="placeholder">[correo de contacto]</span>.
+      </p>
+    </section>
 
-Puedes solicitar, conforme a la legislación aplicable:
+  </div>
 
-- **Acceso:** conocer qué datos personales tenemos sobre ti.
-- **Rectificación:** corregir datos inexactos o incompletos.
-- **Cancelación:** solicitar la eliminación de tus datos cuando corresponda.
-- **Oposición:** oponerte a determinados tratamientos cuando proceda.
+  <footer>
+    Última Palabra · Aviso de Privacidad
+  </footer>
 
-Para ejercer estos derechos, escribe a [Correo electrónico de privacidad] e indica qué solicitud deseas realizar. Podremos pedir información razonable para verificar tu identidad y proteger tu cuenta.
-
-Las solicitudes se atenderán conforme a los plazos y requisitos legales aplicables.
-
-## 11. Privacidad de menores
-
-La aplicación no debe recopilar deliberadamente información personal de menores de una manera incompatible con la legislación aplicable. Si se establece que se ha tratado información de forma indebida, se evaluarán las medidas necesarias para corregir la situación.
-
-[Definir aquí la edad objetivo de la aplicación y cualquier medida específica para usuarios menores, según las funciones y la distribución real del juego.]
-
-## 12. Cambios en esta política
-
-Esta política puede actualizarse cuando cambien las funciones, los proveedores o las obligaciones aplicables. La versión vigente estará disponible en la dirección pública indicada en la aplicación y en Google Play.
-
-Si un cambio requiere notificación o consentimiento adicional, se realizarán las acciones correspondientes conforme a la legislación aplicable.
-
-## 13. Contacto
-
-Para consultas sobre esta política o sobre el tratamiento de datos personales:
-
-**Responsable:** [Nombre completo o razón social]  
-**Correo electrónico:** [Correo de contacto]  
-**Domicilio:** [Domicilio del responsable, según corresponda legalmente]
-
+</div>
+</body>
+</html>
