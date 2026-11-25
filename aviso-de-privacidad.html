@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aviso de privacidad — Funable</title>
+<meta name="description" content="Aviso de privacidad de la versión de prueba de Funable (privacidad-2).">
+<style>
+  :root {
+    --bg: #f6f7fb;
+    --surface: #ffffff;
+    --text: #1b2030;
+    --muted: #5a6378;
+    --accent: #5b3fd6;
+    --border: #e2e5ee;
+    --note-bg: #fff8db;
+    --note-border: #e8c84a;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0e1424;
+      --surface: #1c2640;
+      --text: #f1f4fa;
+      --muted: #a9b3c9;
+      --accent: #9d7bff;
+      --border: #2b3757;
+      --note-bg: #2b2611;
+      --note-border: #facc15;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0e1424;
+    --surface: #1c2640;
+    --text: #f1f4fa;
+    --muted: #a9b3c9;
+    --accent: #9d7bff;
+    --border: #2b3757;
+    --note-bg: #2b2611;
+    --note-border: #facc15;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  }
+  main {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 32px 16px 48px;
+  }
+  header { margin-bottom: 24px; }
+  .app { color: var(--accent); font-weight: 700; letter-spacing: .04em; text-transform: uppercase; font-size: 14px; margin: 0 0 4px; }
+  h1 { font-size: 28px; line-height: 1.25; margin: 0 0 8px; }
+  .meta { color: var(--muted); font-size: 14px; margin: 0; }
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 24px;
+  }
+  .note {
+    background: var(--note-bg);
+    border-left: 4px solid var(--note-border);
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-style: italic;
+    margin: 0 0 20px;
+  }
+  h2 { font-size: 20px; margin: 28px 0 8px; }
+  p { margin: 0 0 14px; }
+  ul { margin: 0 0 14px; padding-left: 22px; }
+  li { margin-bottom: 10px; }
+  strong { font-weight: 650; }
+  a { color: var(--accent); }
+  footer { color: var(--muted); font-size: 13px; margin-top: 20px; text-align: center; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <p class="app">Funable</p>
+    <h1>Aviso de privacidad — versión de prueba de Funable</h1>
+    <p class="meta">Versión: privacidad-2 · Actualizado el 25 de noviembre de 2026</p>
+  </header>
+
+  <article class="card">
+    <p class="note">Borrador para la fase de pruebas. Necesita revisión jurídica antes de abrir pruebas a personas de Latinoamérica y España, y no afirma cumplir todos los requisitos legales de esos países.</p>
+
+    <p><strong>Responsable.</strong> Christian Alejandro Rodriguez Escalon. Contacto: <a href="mailto:alejandroazteca@hotmail.com">alejandroazteca@hotmail.com</a>.</p>
+    <p><strong>A quién se dirige.</strong> A personas hispanohablantes de Latinoamérica y España de 16 años o más. Tu edad es una declaración tuya; no la comprobamos.</p>
+    <p><strong>Infraestructura en esta etapa de pruebas.</strong> Durante las pruebas, el juego puede conectarse a un servidor local de desarrollo o a un servidor de pruebas alojado en Cloudflare. Estos entornos se utilizan para permitir las partidas y probar el funcionamiento de la aplicación. El entorno definitivo de producción todavía no está habilitado.</p>
+
+    <h2>Qué guarda Funable</h2>
+    <ul>
+      <li><strong>Un identificador anónimo.</strong> La aplicación crea una cuenta anónima con Firebase Authentication (de Google). No te pedimos nombre, correo, teléfono ni fecha de nacimiento.</li>
+      <li><strong>Lo que ocurre en tus partidas.</strong> En qué salas entras, tu número de jugador, cuándo te conectas o desconectas, si eres eliminado o abandonas, tus votos y el resultado.</li>
+      <li><strong>Tus mensajes.</strong> El texto de tus mensajes del chat y de tu mensaje final si eres eliminado. El historial de cada sala conserva como mucho los últimos 50 mensajes; los anteriores dejan de estar disponibles para consulta.</li>
+      <li><strong>Copias para desempatar.</strong> De cada ronda guardamos una versión simplificada (en minúsculas y sin espacios repetidos) de hasta dos mensajes tuyos. Sirve para resolver empates al final de la partida; no se muestra a nadie y se guarda con los datos de la partida.</li>
+    </ul>
+
+    <p><strong>Qué reciben nuestros proveedores.</strong> Para que la aplicación funcione, Google recibe los datos técnicos necesarios para tu identidad anónima, como tu dirección IP. Cuando el servidor esté en Cloudflare, Cloudflare también recibirá los datos técnicos de tus conexiones. Funable no guarda tu dirección IP con los datos de las partidas. Lo que esos proveedores registren se rige por sus propias condiciones.</p>
+    <p><strong>Qué se guarda en tu teléfono.</strong> Tu declaración de edad, tus aceptaciones (con versión y fecha) y la sesión anónima de Firebase. Las declaraciones y aceptaciones no se incluyen en la copia de seguridad de Android.</p>
+    <p><strong>Para qué usamos la información.</strong> Para que puedas jugar: crear y unirte a salas, reconectarte, contar los votos, resolver las rondas y mostrar los resultados. Para detectar fallos, el servidor registra eventos técnicos con el código de la sala, sin tus mensajes ni tu identificador.</p>
+
+    <h2>Quién ve qué</h2>
+    <ul>
+      <li><strong>Mensajes.</strong> Las personas que participan en la sala pueden ver los mensajes disponibles. Cuando una partida termina, quienes tuvieron un puesto en ella pueden consultar el historial que siga disponible, según las funciones de lectura de Funable.</li>
+      <li><strong>Votaciones de eliminación de cada ronda.</strong> Durante la partida nadie puede consultarlas: tú ves solo tu propio voto. Cuando la partida termina, cada jugador que tuvo un puesto en ella, incluido quien la abandonó, puede consultar quién votó por eliminarlo en cada ronda, identificado por su número de jugador en esa partida («Jugador N»). Solo se muestran los votos que contaron; nadie puede ver los votos que recibieron los demás jugadores.</li>
+      <li><strong>Votación final.</strong> Al terminar la partida, quienes tuvieron un puesto en ella, incluidos quienes la abandonaron, pueden ver el resultado y a quién votó en la votación final cada jugador eliminado.</li>
+      <li><strong>Cambio previsto.</strong> En una versión futura, los jugadores eliminados podrán consultar todas las votaciones de la partida, incluidas las anteriores y posteriores a su eliminación. Todavía no está disponible. Cuando lo esté, actualizaremos este aviso y te lo mostraremos de nuevo.</li>
+    </ul>
+
+    <p><strong>Cuánto tiempo se conserva.</strong> Todavía no hemos definido plazos de conservación. Actualmente no existe un mecanismo implementado de borrado automático de partidas, cuentas ni datos asociados. Por tanto, no podemos garantizar que los datos se eliminen al abandonar o terminar una partida, ni al desinstalar la aplicación.</p>
+    <p><strong>Consultas sobre tus datos.</strong> Puedes dejar de jugar en cualquier momento. Para cualquier consulta sobre tus datos, escribe a <a href="mailto:alejandroazteca@hotmail.com">alejandroazteca@hotmail.com</a>.</p>
+    <p><strong>Cambios en este aviso.</strong> Si lo modificamos, te mostraremos la nueva versión antes de que sigas jugando.</p>
+  </article>
+
+  <footer>Funable · Aviso de privacidad (privacidad-2)</footer>
+</main>
+</body>
+</html>
